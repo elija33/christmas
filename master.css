@@ -1,0 +1,426 @@
+
+/*Background scenery */
+
+html{
+  height: 100vh;
+  background: #283044 url('https://netvu.informz.net/netvu/data/images/Christmas%202017/background.png') repeat-x;
+  background-position: 1% 500px;
+}
+
+/*Happy Holidays title and text box at top of the page */
+.box {
+  width: 50%;
+  margin: 0 auto;
+  padding: 3px;
+  background-clip: padding-box;
+  text-align: center;
+  color:#fff;
+  font-family:Helvetica, Arial, sans-serif;
+  line-height:1.8em;
+  font-size:.9em;
+}
+/* Container for scaling browser sizes */
+.container {
+  position: relative;
+  float:left;
+  max-width: 100vh;
+  max-height: 50%;
+  overflow: hidden;
+  &:before {
+    content: "";
+    display: block;
+    margin-top: 100vh;
+  }
+}
+/* Boy */
+#boy{
+		position:absolute;
+  	z-index:-1;
+		left:45px;
+		top:805px;
+	}
+
+	#arm{
+		position:absolute;
+		z-index:-1;
+		left:0px;
+		top:915px;
+animation:wave 4s infinite;
+-webkit-animation:wave 4s infinite;}
+
+#pup{
+		position:absolute;
+		z-index:1;
+		left:294px;
+		top:1078px;
+	}
+
+
+	#tail{
+		position:absolute;
+		z-index:-1;
+		left:305px;
+		top:1095px;
+  animation:wag 2s infinite;
+-webkit-animation:wag 2s infinite;
+/*animation:wag 4s infinite;
+webkit-animation:wag 4s infinite;}*/
+	}
+
+
+/*Hand Animation*/
+@-webkit-keyframes wave{
+	0%  {-webkit-transform:rotate(-5deg)}
+	50% {-webkit-transform:rotate(15deg)}
+	100%{-webkit-transform:rotate(-5deg)}
+}
+@keyframes wave{
+	0%  {transform:rotate(-5deg);-ms-transform:rotate(-5deg)}
+	50% {transform:rotate(15deg);-ms-transform:rotate(15deg)}
+	100%{transform:rotate(-5deg);-ms-transform:rotate(-5deg)}
+}
+
+/*wag Animation*/
+@-webkit-keyframes wag{
+	0%  {-webkit-transform:rotate(0deg)}
+	50% {-webkit-transform:rotate(15deg)}
+	100%{-webkit-transform:rotate(0deg)}
+}
+@keyframes wag{
+	0%  {transform:rotate(0deg);-ms-transform:rotate(0deg)}
+	50% {transform:rotate(15deg);-ms-transform:rotate(15deg)}
+	100%{transform:rotate(0deg);-ms-transform:rotate(0deg)}
+}
+/* Popup */
+
+
+.button {
+  font-size: 1em;
+  padding: 15px;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 0px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+.button:hover {
+  background: #7abad3;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  margin: 70px auto;
+  padding: 30px;
+  background: #fff;
+  border-radius: 5px;
+  width: 80%;
+  position: relative;
+  transition: all 5s ease-in-out;
+  z-index:1000;
+}
+
+.popup h2 {
+  margin-top: 0;
+  color: #333;
+  font-family: Tahoma, Arial, sans-serif;
+}
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popup .close:hover {
+  color: #06D85F;
+}
+.popup .content {
+  max-height: 30%;
+  overflow: auto;
+}
+
+@media screen and (max-width: 700px){
+  .box{
+    width: 70%;
+  }
+  .popup{
+    width: 70%;
+  }
+}
+#popup1, #popup2, #popup3, #popup4, #popup5, #popup6, #popup7, #popup8,#popup9, #popup10, #popup11, #popup12, #popup13, #popup14, #popup15, #popup16, #popup17, #popup18, #popup19, #popup20, #popup21, #popup22, #popup23, #popup24, #popup25{
+  z-index:1000;
+}
+
+
+/* Snow Animation - Credit: https://codepen.io/NickyCDK*/
+#snow{
+	background: none;
+	font-family: Androgyne;
+	background-image: url('http://www.wearewebstars.dk/codepen/img/s1.png'), url('http://www.wearewebstars.dk/codepen/img//s2.png'), url('http://www.wearewebstars.dk/codepen/img//s3.png');
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+  min-height:900px;
+  height:1200px;
+	z-index:1;
+	-webkit-animation: snow 10s linear infinite;
+	-moz-animation: snow 10s linear infinite;
+	-ms-animation: snow 10s linear infinite;
+	animation: snow 10s linear infinite;
+}
+@keyframes snow {
+  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+  50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
+  100% {background-position: 500px 1000px, 200px 400px, -100px 300px;}
+}
+@-moz-keyframes snow {
+  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+  50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
+  100% {background-position: 400px 1000px, 200px 400px, 100px 300px;}
+}
+@-webkit-keyframes snow {
+  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+  50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
+  100% {background-position: 500px 1000px, 200px 400px, -100px 300px;}
+}
+@-ms-keyframes snow {
+  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+  50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
+  100% {background-position: 500px 1000px, 200px 400px, -100px 300px;}
+}
+
+main {
+    text-align: center;
+ padding:20px 10px 10px 20px;
+
+  }
+
+  .door,
+  .present {
+    width: 100%;
+    height: 100%;
+  }
+
+  .day {
+    display: inline-block;
+    width: 9em;
+    height: 9em;
+    margin: 5px;
+    -webkit-perspective: 850px;
+            perspective: 850px;
+    z-index:1;
+  }
+
+  .door {
+    position: relative;
+    background: #92d050;
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+    -webkit-transform-origin: 0;
+            transform-origin: 0;
+    -webkit-perspective: 850px;
+            perspective: 850px;
+    text-align: center;
+    box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+    z-index:2000;
+  }
+  .door h2 {
+    position: absolute;
+    width: 3em;
+    height: 3em;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    margin: 0;
+    padding: 0.5em;
+    font-size: 2em;
+    line-height: 3em;
+    color: white;
+    border-radius: 50%;
+  }
+
+  .day:hover .door,
+  .day:focus .door,
+  .day:active .door {
+    background: #92d050;
+    -webkit-transform: rotateY(-97deg);
+            transform: rotateY(-97deg);
+    -webkit-perspective-origin: 0;
+            perspective-origin: 0;
+    -webkit-transition: all .4s ease-in;
+    transition: all .4s ease-in;
+  }
+  .day:hover .door h2,
+  .day:focus .door h2,
+  .day:active .door h2 {
+
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+  }
+  .day:hover .bauble,
+  .day:focus .bauble,
+  .day:active .bauble {
+    display: inline-block;
+    -webkit-animation: shake 1s;
+            animation: shake 1s;
+    -webkit-transform-origin: 50% 0;
+            transform-origin: 50% 0;
+  }
+
+  .present1 {
+        background-image: url('https://netvu.informz.net/netvu/data/images/Christmas%202017/11.png');
+    position: absolute;
+    top: 0;
+    left: 0;
+  /*  background: #221;*/
+    /* background: url('https://netvu.informz.net/netvu/data/images/Christmas%202017/11.png');*/
+    box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.15), inset 0 0 30px 20px rgba(0, 0, 0, 0.4);
+    z-index: -1;
+  }
+.present {
+  background:#fff;
+      /*  background-image: url('https://netvu.informz.net/netvu/data/images/Christmas%202017/11.png');*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.15), inset 0 0 30px 20px rgba(0, 0, 0, 0.1);
+}
+
+  .bauble {
+    margin-top:20px;
+    position: relative;
+    width: 100px;
+    height: 110px;
+  /*background:url('https://netvu.informz.net/netvu/data/images/Christmas%202017/1@0.5x.png');
+    background: #92d050;
+    margin: 25% auto 0 auto;
+    font-size: 2em;
+    font-weight: bold;
+    line-height: 2.75em;
+    color: white;
+    border-radius: 50%;*/
+  }
+
+ /* .bauble:after {
+    content: "";
+    position: absolute;
+    top: -5%;
+    left: 50%;
+    margin-left: -15%;
+    width: 30%;
+    height: 10%;
+    background: inherit;
+  }*/
+ /* .bauble:before {
+    content: "";
+    width: 12%;
+    height: 12%;
+    position: absolute;
+    top: 1%;
+    left: 54%;
+    margin-left: -12%;
+    border-radius: 50%;
+    border: 0.35rem solid #92d050;
+    z-index: 0;
+  }*/
+  @keyframes shake {
+    0% {
+      -webkit-transform: rotate(0deg);
+              transform: rotate(0deg);
+    }
+    20% {
+      -webkit-transform: rotate(-20deg);
+              transform: rotate(-20deg);
+    }
+    40% {
+      -webkit-transform: rotate(20deg);
+              transform: rotate(20deg);
+    }
+    60% {
+      -webkit-transform: rotate(-10deg);
+              transform: rotate(-10deg);
+    }
+    80% {
+      -webkit-transform: rotate(10deg);
+              transform: rotate(10deg);
+    }
+    100% {
+      -webkit-transform: rotate(0deg);
+              transform: rotate(0deg);
+    }
+  }
+  @-webkit-keyframes shake {
+    0% {
+      -webkit-transform: rotate(0deg);
+              transform: rotate(0deg);
+    }
+    20% {
+      -webkit-transform: rotate(-20deg);
+              transform: rotate(-20deg);
+    }
+    40% {
+      -webkit-transform: rotate(20deg);
+              transform: rotate(20deg);
+    }
+    60% {
+      -webkit-transform: rotate(-10deg);
+              transform: rotate(-10deg);
+    }
+    80% {
+      -webkit-transform: rotate(10deg);
+              transform: rotate(10deg);
+    }
+    100% {
+      -webkit-transform: rotate(0deg);
+              transform: rotate(0deg);
+    }
+  }
+@media only screen and (min-width: 1200px) {
+    /* styles for wide screens */
+}
+@media only screen and (max-width: 830px) {
+    /* styles for wide screens */
+    #boy,#pup,#pup2,#arm,#tail{z-index:-1;
+  }
+}
+
+@media only screen and (max-width: 580px) {
+  html{
+    background-position:bottom 100%;
+    margin-top:220vh;
+  }
+  #boy,#pup,#pup2,#arm,#tail{z-index:-1;
+  }
+    #container{
+      position:relative;
+    height:auto;
+  }
+  .demo-holder{width:70%;
+  margin:0px auto;}
+}
